@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>운영자 계정 생성</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .register-container { max-width: 500px; margin: 50px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .btn-admin { background-color: #343a40; color: white; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="register-container">
+        <h3 class="text-center mb-4">플랫폼 운영자 등록</h3>
+        <hr>
+        
+        <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+        <div th:if="${param.success}" class="alert alert-success">관리자 계정이 성공적으로 등록되었습니다!</div>
+
+        <form th:action="@{/user/adminRegister}" th:object="${emartUserDTO}" method="post">
+            
+            <div class="mb-3">
+                <label class="form-label">계정 ID (숫자)</label>
+                <input type="number" th:field="*{accountId}" class="form-control" placeholder="숫자 ID를 입력하세요" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">비밀번호</label>
+                <input type="password" th:field="*{password}" class="form-control" placeholder="비밀번호를 입력하세요" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">운영자 성함</label>
+                <input type="text" th:field="*{adminName}" class="form-control" placeholder="이름을 입력하세요" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label d-block">권한 레벨</label>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="roleAdmin" class="form-check-input" onclick="handleRoleCheck(this, 'admin')">
+                    <label for="roleAdmin" class="form-check-label">관리자 운영자 (9)</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="roleNormal" class="form-check-input" onclick="handleRoleCheck(this, 'normal')">
+                    <label for="roleNormal" class="form-check-label">일반 운영자 (1)</label>
+                </div>
+                
+                <input type="hidden" th:field="*{roleLevel}" id="selectedRoleLevel">
+                
+                <div class="mt-2 small text-muted">선택된 권한: <span id="selectedRoleText">없음</span></div>
+            </div>
+
+            <div class="d-grid pt-3">
+                <button type="submit" class="btn btn-admin btn-lg">계정 생성하기</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function handleRoleCheck(checkbox, roleType) {
+        const adminCk = document.getElementById('roleAdmin');
+        const normalCk = document.getElementById('roleNormal');
+        const levelInput = document.getElementById('selectedRoleLevel');
+        const textDisplay = document.getElementById('selectedRoleText');
+
+        if (checkbox.checked) {
+            adminCk.checked = (roleType === 'admin');
+            normalCk.checked = (roleType === 'normal');
+            levelInput.value = (roleType === 'admin') ? 9 : 1;
+            textDisplay.textContent = (roleType === 'admin') ? '관리자 운영자 (9)' : '일반 운영자 (1)';
+        } else {
+            levelInput.value = '';
+            textDisplay.textContent = '없음';
+        }
+    }
+</script>
+</body>
+</html>

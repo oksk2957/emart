@@ -1,0 +1,226 @@
+{
+  "workspaceFoldersFilePaths": [
+    "g:\\project\\emart/"
+  ],
+  "symbols": [
+    {
+      "name": "# Getting Started",
+      "kind": 14,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\HELP.md",
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 27,
+        "character": 0
+      }
+    },
+    {
+      "name": "### Additional Links",
+      "kind": 14,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\HELP.md",
+      "start": {
+        "line": 22,
+        "character": 0
+      },
+      "end": {
+        "line": 27,
+        "character": 0
+      }
+    },
+    {
+      "name": "### Guides",
+      "kind": 14,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\HELP.md",
+      "start": {
+        "line": 13,
+        "character": 0
+      },
+      "end": {
+        "line": 21,
+        "character": 0
+      }
+    },
+    {
+      "name": "### Reference Documentation",
+      "kind": 14,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\HELP.md",
+      "start": {
+        "line": 2,
+        "character": 0
+      },
+      "end": {
+        "line": 12,
+        "character": 0
+      }
+    },
+    {
+      "name": "@+ 'emartApplication' (@SpringBootApplication <: @SpringBootConfiguration, @Configuration, @Component) EmartApplication",
+      "kind": 4,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\src\\main\\java\\com\\ex\\emart\\EmartApplication.java",
+      "start": {
+        "line": 6,
+        "character": 13
+      },
+      "end": {
+        "line": 6,
+        "character": 29
+      }
+    },
+    {
+      "name": "@+ 'userController' (@Controller <: @Component) UserController",
+      "kind": 4,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\src\\main\\java\\com\\ex\\emart\\user\\controller\\UserController.java",
+      "start": {
+        "line": 16,
+        "character": 13
+      },
+      "end": {
+        "line": 16,
+        "character": 27
+      }
+    },
+    {
+      "name": "@+ 'userService' UserService",
+      "kind": 4,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\src\\main\\java\\com\\ex\\emart\\service\\UserService.java",
+      "start": {
+        "line": 7,
+        "character": 17
+      },
+      "end": {
+        "line": 7,
+        "character": 28
+      }
+    },
+    {
+      "name": "@+ 'userServiceImpl' UserServiceImpl",
+      "kind": 4,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\src\\main\\java\\com\\ex\\emart\\service\\UserServiceImpl.java",
+      "start": {
+        "line": 13,
+        "character": 13
+      },
+      "end": {
+        "line": 13,
+        "character": 28
+      }
+    },
+    {
+      "name": "@/user/loginPage",
+      "kind": 5,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\src\\main\\java\\com\\ex\\emart\\user\\controller\\UserController.java",
+      "start": {
+        "line": 26,
+        "character": 4
+      },
+      "end": {
+        "line": 26,
+        "character": 32
+      }
+    },
+    {
+      "name": "@/user/registerPage",
+      "kind": 5,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\src\\main\\java\\com\\ex\\emart\\user\\controller\\UserController.java",
+      "start": {
+        "line": 33,
+        "character": 4
+      },
+      "end": {
+        "line": 33,
+        "character": 35
+      }
+    },
+    {
+      "name": "@/user/registerProcess",
+      "kind": 5,
+      "containerName": "",
+      "filePath": "g:\\project\\emart\\src\\main\\java\\com\\ex\\emart\\user\\controller\\UserController.java",
+      "start": {
+        "line": 39,
+        "character": 4
+      },
+      "end": {
+        "line": 39,
+        "character": 38
+      }
+    }
+  ],
+  "activeFileDiagnostics": [
+    {
+      "start": {
+        "line": 2,
+        "character": 7
+      },
+      "end": {
+        "line": 2,
+        "character": 20
+      },
+      "message": "The import java.sql.Date is never used",
+      "severity": 1
+    },
+    {
+      "start": {
+        "line": 0,
+        "character": 15
+      },
+      "end": {
+        "line": 0,
+        "character": 20
+      },
+      "message": "\"emart\": Unknown word.",
+      "severity": 2
+    }
+  ],
+  "activeTextEditor": {
+    "selections": [
+      {
+        "anchor": {
+          "line": 28,
+          "character": 0
+        },
+        "active": {
+          "line": 28,
+          "character": 0
+        },
+        "isReversed": true
+      }
+    ],
+    "documentFilePath": "g:\\project\\emart\\src\\main\\java\\com\\ex\\emart\\dto\\UserDto.java",
+    "visibleRanges": [
+      {
+        "start": {
+          "line": 10,
+          "character": 0
+        },
+        "end": {
+          "line": 28,
+          "character": 0
+        }
+      }
+    ],
+    "languageId": "java"
+  },
+  "debugConsoleOutput": "",
+  "terminalBuffer": "",
+  "terminalSelection": "",
+  "terminalShellType": "pwsh",
+  "repoContexts": [],
+  "notebookDocumentFilePaths": [],
+  "textDocumentFilePaths": [
+    "src/main/java/com/ex/emart/dto/UserDto.java",
+    "src/main/resources/mybatis/mapper/user/UserSqlMapper.xml"
+  ]
+}

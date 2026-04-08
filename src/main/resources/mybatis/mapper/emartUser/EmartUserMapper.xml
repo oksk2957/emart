@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ex.emartUser.mapper.EmartUserMapper">
+
+    <insert id="insertPlatformUserMapper" parameterType="com.ex.emartUser.dto.EmartUserDTO">
+        INSERT INTO emart_user (
+            name,
+            user_id,
+            password,
+            email,
+            gender,
+            birth,
+            phone,
+            use_terms,
+            role_id,
+            created_at
+        ) VALUES (
+            #{name},
+            #{userId},
+            #{userPassword},
+            #{email},
+            #{gender},
+            #{birth},
+            #{phone},
+            #{useTerms},
+            3,
+            NOW()
+        )
+    </insert>
+
+<select id="findEmartUserByIdAndPassword" parameterType="com.ex.emartUser.dto.EmartUserDTO">
+        SELECT *
+            FROM emart_user eu
+            WHERE eu.user_id = #{userId} 
+              AND eu.password = #{userPassword}
+    </select>
+
+
+</mapper>

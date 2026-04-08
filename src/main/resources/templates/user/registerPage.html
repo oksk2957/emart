@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <!-- 1. [수정] 바깥쪽 <form> 태그는 완전히 제거됨 (중첩 방지) -->
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <nav class="navbar navbar-light bg-white rounded shadow-sm">
+                    <div class="container-fluid">1</div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-5">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="text-center mb-4">회원 가입</h1>
+                        <p class="text-center text-muted mb-4">간단한 정보 입력으로 서비스를 이용해보세요</p>
+
+                        <!-- 2. [확인] action과 method가 정확한지 확인 -->
+                        <form action="/emartUser/registerProcess" method="post">
+
+                            <!-- 아이디 -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label">이름</label>
+                                <!-- 3. [수정] type="accountName" -> type="text" 
+                                     브라우저가 인식 못 하는 타입은 전송 오류의 원인이 됩니다. -->
+                                <!-- 이름 -->
+                                <input type="text" class="form-control" name="name"
+                                    placeholder="6~20 자 영문, 숫자 조합" required>
+                            
+                            </div>
+
+                            <!-- 아이디 -->
+                            <div class="mb-3">
+                                <label for="userId" class="form-label">아이디</label>
+                                <!-- 3. [수정] type="accountName" -> type="text" 
+                                     브라우저가 인식 못 하는 타입은 전송 오류의 원인이 됩니다. -->
+                                <!-- 아이디 -->
+                                <input type="text" class="form-control" name="userId" placeholder="6~20 자 영문, 숫자 조합"
+                                    required>
+                            </div>
+
+                            <!-- 비밀번호 (user_password) -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">비밀번호</label>
+                                <!-- ★ 수정점1 : type를 password 로 변경 ★ -->
+                                <input type="password" class="form-control form-control-lg" id="password"
+                                    name="password" autocomplete="current-password"
+                                    placeholder="8~16 자 영문, 숫자, 특수문자" required>
+                                </input>
+                            </div>
+
+                            <!-- 비밀번호 확인 (userPassword confirmation) -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">비밀번호 확인</label>
+                                <!-- 비밀번호 -->
+                                <input type="password" class="form-control" name="password"
+                                    autocomplete="new-password" placeholder="비밀번호를 다시 입력하세요" required>
+                                </input>
+                            </div>
+
+                            <!-- 에러 메시지 -->
+                            <div class="alert alert-danger" th:if="${error}" th:text="${error}"></div>
+
+                            <!-- 성공 메시지 -->
+                            <div class="alert alert-success" th:if="${success}" th:text="${success}"></div>
+
+
+
+                            <!-- 이메일 -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">이메일</label>
+                                <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                    placeholder="example@email.com" required>
+                            </div>
+
+                            <!-- 성별 -->
+                            <div class="mb-3">
+                                <label class="form-label">성별</label>
+                                <div class="d-flex gap-3">
+                                    <div class="form-check">
+                                        <!-- 7. [수정] radio 버튼의 name은 DTO 필드명인 gender와 정확히 일치해야 함 -->
+                                        <input class="form-check-input" type="radio" name="gender" id="genderMale"
+                                            value="male">
+                                        <label class="form-check-label" for="genderMale">남성</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="genderFemale"
+                                            value="female">
+                                        <label class="form-check-label" for="genderFemale">여성</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 생년월일 -->
+                            <div class="mb-3">
+                                <label for="birth" class="form-label">생년월일</label>
+                                <!-- 8. [수정] type="date"를 사용하면 LocalDate DTO와 자동 매핑이 잘 됩니다. 
+                                     name="birth"는 DTO의 필드명과 일치해야 합니다. -->
+                                <input type="date" class="form-control form-control-lg" id="birth" name="birth"
+                                    required>
+                            </div>
+
+                            <!-- 전화번호 -->
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">전화번호</label>
+                                <input type="tel" class="form-control form-control-lg" id="phone" name="phone"
+                                    placeholder="010-0000-0000" required>
+
+                            </div>
+
+                            <!-- 약관 동의 -->
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <!-- 9. [수정] 체크박스의 경우 value="Y" 등으로 명시적 값을 주는 것이 좋습니다. -->
+                                    <!-- 약관 (value="Y" → value="true" 또는 제거) -->
+                                    <input type="checkbox" name="useTerms" value="true" required>
+                                    <label class="form-check-label" for="useTerms">
+                                        이용약관 및 개인정보처리방침에 동의합니다
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                                회원 가입
+                            </button>
+
+                            <div class="text-center">
+                                <span class="text-muted">이미 계정이 있으신가요?</span>
+                                <a href="http://localhost:8088/EmartUser/loginPage"
+                                    class="text-decoration-none fw-bold">로그인</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

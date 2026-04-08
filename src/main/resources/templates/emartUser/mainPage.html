@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    </head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- ✅ g-0 으로 간격 제거 -->
+        <div class="row g-0">
+            <div class="col-md-3 text-start text bg-debug-left">1</div>
+            <div class="col-md-3 text-start text bg-debug-left">1</div>
+            <div class="col-md-3 text-start text bg-debug-left">1</div>
+            <div class="col-md-3 text-start text bg-debug-left">1</div>
+        </div>
+        <!-- ✅ g-0 으로 간격 제거 -->
+        <div class="row g-0">
+            <div class="col-md-3 text-start text bg-debug-left">1</div>
+            <div class="col-md-3 text-start text bg-debug-left">1</div>
+            <div class="col-md-3 text-start text bg-debug-left">1</div>
+            <div class="col-md-3 text-start text bg-debug-left">1</div>
+        </div>
+
+
+        <!-- ✅ g-0 으로 간격 제거 -->
+        <div class="row g-0">
+            <div class="col-md-3 text-start text bg-debug-left">
+                1
+            </div>
+
+            <div class="col-md-3 start">
+                <img src="https://shopping-window.pstatic.net/public/svg/quick-commerce/logo/LogoEmart202X47.svg"
+                    alt="EMART" class="img-fluid">
+            </div>
+            <!-- ✅ text-success 클래스 추가 -->
+            <div class="col-md-3 text-end text-success bg-debug-left">
+
+         <!-- ✅ text-success 클래스 추가 -->
+<div class="col-md-3 text-end text-success bg-debug-left">
+    <!-- ✅ 로그인 상태일 때 (userId가 null이 아니고 빈 문자열이 아닐 때) -->
+    <th:block th:if="${userId != null and userId != ''}">
+        <span class="me-2">
+            <span th:text="${userId}" class="fw-bold text-success">userId</span>님 환영합니다!
+        </span>
+        <!-- 로그아웃 폼 -->
+        <form th:action="@{/emartUser/logout}" method="post" class="d-inline">
+            <button type="submit" class="btn btn-outline-secondary btn-sm">
+                로그아웃
+            </button>
+        </form>
+    </th:block>
+    <!-- ✅ 비로그인 상태일 때 (userId가 null이거나 빈 문자열일 때) -->
+    <th:block th:unless="${userId != null and userId != ''}">
+        <span class="text-muted">
+            로그인을 진행해주세요
+            <a th:href="@{/emartUser/loginPage}" class="btn btn-success btn-sm">
+                로그인
+            </a>
+        </span>
+    </th:block>
+    
+</div> <!-- <div class="container-fluid"> -->
+
+
+
+    <div class="col-md-3 bg-debug-left">
+        <button type="button" class="_gnbContent_button_dwRu0 N=a:SNB.category _nlog_click"
+            data-shp-page-key="100380574" data-shp-sti="" data-shp-nsc="shoppingw.market" data-shp-inventory="GNB"
+            data-shp-area="GNB.morecategory" data-shp-area-type="action" data-shp-area-id="morecategory"><svg width="28"
+                height="28" fill="none" class="_gnbContent_icon_ESr3R">
+                <path stroke="currentColor" stroke-width="1.3"
+                    d="M12.365 8.522a3.86 3.86 0 11-7.72 0 3.86 3.86 0 017.72 0zm3.343-1.691c0-1.146.929-2.075 2.075-2.075h3.382c1.146 0 2.075.929 2.075 2.075v3.382a2.075 2.075 0 01-2.075 2.075h-3.382a2.075 2.075 0 01-2.075-2.075V6.83zM4.756 17.827c0-1.146.929-2.074 2.074-2.074h3.383c1.145 0 2.074.928 2.074 2.074v3.382a2.075 2.075 0 01-2.074 2.075H6.83a2.075 2.075 0 01-2.074-2.075v-3.382zm13.314-1.213a1.59 1.59 0 012.753 0l2.173 3.763a1.59 1.59 0 01-1.377 2.385h-4.345a1.59 1.59 0 01-1.377-2.385l2.173-3.763z">
+                </path>
+            </svg>카테고리</button>
+
+
+
+
+
+        <button role="link" class="_gnbContent_side_link_ylLn9 N=a:SNB.m.shoppingmy _nlog_click"
+            data-shp-page-key="100380574" data-shp-sti="" data-shp-nsc="shoppingw.market" data-shp-inventory="GNB"
+            data-shp-area="GNB.shoppingmy" data-shp-area-type="action" data-shp-area-id="shoppingmy"><svg width="28"
+                height="28" fill="none" class="_gnbContent_icon_ESr3R person">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
+                    d="M13.915 13.144a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5zm-7.88 9.391a1.379 1.379 0 01-1.379-1.378v0c0-.763.36-1.482.968-1.94a13.354 13.354 0 0116.066 0c.608.459.966 1.176.966 1.938v0a1.38 1.38 0 01-1.38 1.38H6.035z">
+                </path>
+            </svg>마이쇼핑</button>
+
+
+
+
+        <button role="link"
+            href="https://shopping.naver.com/cart/mart?channelNo=101309003&amp;deliveryAttributeType=TODAY_ARRIVAL"
+            class="_gnbContent_side_link_ylLn9 N=a:GNB.cart _nlog_click" data-shp-page-key="100380574" data-shp-sti=""
+            data-shp-nsc="shoppingw.market" data-shp-inventory="GNB" data-shp-area="GNB.directcart"
+            data-shp-area-type="action" data-shp-area-id="directcart"><svg width="28" height="28" fill="none"
+                class="_gnbContent_icon_ESr3R _gnbContent_cart_jaybJ">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.3"
+                    d="M17.75 12.75V8A3.75 3.75 0 0014 4.25v0A3.75 3.75 0 0010.25 8v4.75"></path>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
+                    d="M22.442 10.25H5.558a.836.836 0 00-.813 1.03l2.113 8.897a3.346 3.346 0 003.255 2.573h7.774a3.346 3.346 0 003.255-2.573l2.113-8.897a.836.836 0 00-.813-1.03z">
+                </path>
+            </svg>장바구니</button>
+    </div>
+
+
+
+    <!-- ✅ g-0 으로 간격 제거 -->
+    <div class="row g-0">
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+    </div>
+
+
+
+
+    <!-- ✅ g-0 으로 간격 제거 -->
+    <div class="row g-0">
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+    </div>
+
+    <!-- ✅ g-0 으로 간격 제거 -->
+    <div class="row g-0">
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+    </div>
+    <!-- ✅ g-0 으로 간격 제거 -->
+    <div class="row g-0">
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+    </div>
+    <!-- ✅ g-0 으로 간격 제거 -->
+    <div class="row g-0">
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+    </div>
+    <!-- ✅ g-0 으로 간격 제거 -->
+    <div class="row g-0">
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+    </div>
+    <!-- ✅ g-0 으로 간격 제거 -->
+    <div class="row g-0">
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+    </div>
+
+    <!-- ✅ g-0 으로 간격 제거 -->
+
+    <div class="row g-0">
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+        <div class="col-md-3 text-start text bg-debug-left">입점안내</div>
+
+        <div class="col-md-3 text-start text bg-debug-left">1</div>
+    </div>
+    </div>
+</body>
+
+</html>
