@@ -54,6 +54,7 @@ public class EmartUserServiceImpl implements EmartUserService {
             response.put("user", user);  // 사용자 정보도 함께 반환
         } else {
             // 로그인 실패 (사용자 없음 또는 비밀번호 불일치)
+            // 1
             response.put("success", false);
             response.put("message", "아이디 또는 비밀번호가 올바르지 않습니다.");
         }

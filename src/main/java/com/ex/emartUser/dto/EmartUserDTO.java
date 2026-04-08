@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
+//저장소
 @Data
 @Getter
 @Setter
