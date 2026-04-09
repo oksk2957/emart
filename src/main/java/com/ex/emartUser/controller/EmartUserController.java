@@ -1,4 +1,4 @@
-package com.ex.emartUser.user.controller;
+package com.ex.emartUser.controller;
 
 import java.util.Map;
 import java.util.Objects;
@@ -175,6 +175,19 @@ public String mainPage(HttpServletRequest request, Model model) {
         logger.info("mainPage - userId: {}", userId);
         return "emartUser/mainPage"; // 해당 템플릿이 있다면 사용
     }
+
+
+// 180-184번 줄을 아래로 변경
+@GetMapping("/smartstore_seller")
+public String smartStoreSeller() {
+    return "emartUser/smartstore_seller";
+}
+
+// 180-184번 줄을 아래로 변경
+@GetMapping("/emartseller_user_terms")
+public String emartseller_user_terms() {
+    return "emartUser/emartseller_user_terms";
+}
 
 
 }

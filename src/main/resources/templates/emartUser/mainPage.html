@@ -31,7 +31,7 @@
         </div>
 
 
-        <!-- ✅ g-0 으로 간격 제거 -->
+        <!-- ✅  1 setting1 setting1 setting -->
         <div class="row g-0">
             <div class="col-md-3 text-start text bg-debug-left">
                 1
@@ -44,141 +44,258 @@
             <!-- ✅ text-success 클래스 추가 -->
             <div class="col-md-3 text-end text-success bg-debug-left">
 
-         <!-- ✅ text-success 클래스 추가 -->
-<div class="col-md-3 text-end text-success bg-debug-left">
-    <!-- ✅ 로그인 상태일 때 (userId가 null이 아니고 빈 문자열이 아닐 때) -->
-    <th:block th:if="${userId != null and userId != ''}">
-        <span class="me-2">
-            <span th:text="${userId}" class="fw-bold text-success">userId</span>님 환영합니다!
-        </span>
-        <!-- 로그아웃 폼 -->
-        <form th:action="@{/emartUser/logout}" method="post" class="d-inline">
-            <button type="submit" class="btn btn-outline-secondary btn-sm">
-                로그아웃
-            </button>
-        </form>
-    </th:block>
-    <!-- ✅ 비로그인 상태일 때 (userId가 null이거나 빈 문자열일 때) -->
-    <th:block th:unless="${userId != null and userId != ''}">
-        <span class="text-muted">
-            로그인을 진행해주세요
-            <a th:href="@{/emartUser/loginPage}" class="btn btn-success btn-sm">
-                로그인
-            </a>
-        </span>
-    </th:block>
-    
-</div> <!-- <div class="container-fluid"> -->
+                <!-- ✅ text-success 클래스 추가 -->
+                <div class="col-md-3 text-end text-success bg-debug-left">
+                    <!-- ✅ 로그인 상태일 때 (userId가 null이 아니고 빈 문자열이 아닐 때) -->
+                    <th:block th:if="${userId != null and userId != ''}">
+                        <span class="me-2">
+                            <span th:text="${userId}" class="fw-bold text-success">userId</span>님 환영합니다!
+                        </span>
+                        <!-- 로그아웃 폼 -->
+                        <form th:action="@{/emartUser/logout}" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-outline-secondary btn-sm">
+                                로그아웃
+                            </button>
+                        </form>
+                    </th:block>
+                    <!-- ✅ 비로그인 상태일 때 (userId가 null이거나 빈 문자열일 때) -->
+                    <th:block th:unless="${userId != null and userId != ''}">
+                        <span class="text-muted">
+                            로그인을 진행해주세요
+                            <a th:href="@{/emartUser/loginPage}" class="btn btn-success btn-sm">
+                                로그인
+                            </a>
+                        </span>
+                    </th:block>
+
+                </div> <!-- <div class="container-fluid"> -->
 
 
 
-    <div class="col-md-3 bg-debug-left">
-        <button type="button" class="_gnbContent_button_dwRu0 N=a:SNB.category _nlog_click"
-            data-shp-page-key="100380574" data-shp-sti="" data-shp-nsc="shoppingw.market" data-shp-inventory="GNB"
-            data-shp-area="GNB.morecategory" data-shp-area-type="action" data-shp-area-id="morecategory"><svg width="28"
-                height="28" fill="none" class="_gnbContent_icon_ESr3R">
-                <path stroke="currentColor" stroke-width="1.3"
-                    d="M12.365 8.522a3.86 3.86 0 11-7.72 0 3.86 3.86 0 017.72 0zm3.343-1.691c0-1.146.929-2.075 2.075-2.075h3.382c1.146 0 2.075.929 2.075 2.075v3.382a2.075 2.075 0 01-2.075 2.075h-3.382a2.075 2.075 0 01-2.075-2.075V6.83zM4.756 17.827c0-1.146.929-2.074 2.074-2.074h3.383c1.145 0 2.074.928 2.074 2.074v3.382a2.075 2.075 0 01-2.074 2.075H6.83a2.075 2.075 0 01-2.074-2.075v-3.382zm13.314-1.213a1.59 1.59 0 012.753 0l2.173 3.763a1.59 1.59 0 01-1.377 2.385h-4.345a1.59 1.59 0 01-1.377-2.385l2.173-3.763z">
-                </path>
-            </svg>카테고리</button>
-
-
-
-
-
-        <button role="link" class="_gnbContent_side_link_ylLn9 N=a:SNB.m.shoppingmy _nlog_click"
-            data-shp-page-key="100380574" data-shp-sti="" data-shp-nsc="shoppingw.market" data-shp-inventory="GNB"
-            data-shp-area="GNB.shoppingmy" data-shp-area-type="action" data-shp-area-id="shoppingmy"><svg width="28"
-                height="28" fill="none" class="_gnbContent_icon_ESr3R person">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
-                    d="M13.915 13.144a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5zm-7.88 9.391a1.379 1.379 0 01-1.379-1.378v0c0-.763.36-1.482.968-1.94a13.354 13.354 0 0116.066 0c.608.459.966 1.176.966 1.938v0a1.38 1.38 0 01-1.38 1.38H6.035z">
-                </path>
-            </svg>마이쇼핑</button>
+                <div class="col-md-3 bg-debug-left">
+                    <button type="button" class="_gnbContent_button_dwRu0 N=a:SNB.category _nlog_click"
+                        data-shp-page-key="100380574" data-shp-sti="" data-shp-nsc="shoppingw.market"
+                        data-shp-inventory="GNB" data-shp-area="GNB.morecategory" data-shp-area-type="action"
+                        data-shp-area-id="morecategory"><svg width="28" height="28" fill="none"
+                            class="_gnbContent_icon_ESr3R">
+                            <path stroke="currentColor" stroke-width="1.3"
+                                d="M12.365 8.522a3.86 3.86 0 11-7.72 0 3.86 3.86 0 017.72 0zm3.343-1.691c0-1.146.929-2.075 2.075-2.075h3.382c1.146 0 2.075.929 2.075 2.075v3.382a2.075 2.075 0 01-2.075 2.075h-3.382a2.075 2.075 0 01-2.075-2.075V6.83zM4.756 17.827c0-1.146.929-2.074 2.074-2.074h3.383c1.145 0 2.074.928 2.074 2.074v3.382a2.075 2.075 0 01-2.074 2.075H6.83a2.075 2.075 0 01-2.074-2.075v-3.382zm13.314-1.213a1.59 1.59 0 012.753 0l2.173 3.763a1.59 1.59 0 01-1.377 2.385h-4.345a1.59 1.59 0 01-1.377-2.385l2.173-3.763z">
+                            </path>
+                        </svg>카테고리</button>
 
 
 
 
-        <button role="link"
-            href="https://shopping.naver.com/cart/mart?channelNo=101309003&amp;deliveryAttributeType=TODAY_ARRIVAL"
-            class="_gnbContent_side_link_ylLn9 N=a:GNB.cart _nlog_click" data-shp-page-key="100380574" data-shp-sti=""
-            data-shp-nsc="shoppingw.market" data-shp-inventory="GNB" data-shp-area="GNB.directcart"
-            data-shp-area-type="action" data-shp-area-id="directcart"><svg width="28" height="28" fill="none"
-                class="_gnbContent_icon_ESr3R _gnbContent_cart_jaybJ">
-                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.3"
-                    d="M17.75 12.75V8A3.75 3.75 0 0014 4.25v0A3.75 3.75 0 0010.25 8v4.75"></path>
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
-                    d="M22.442 10.25H5.558a.836.836 0 00-.813 1.03l2.113 8.897a3.346 3.346 0 003.255 2.573h7.774a3.346 3.346 0 003.255-2.573l2.113-8.897a.836.836 0 00-.813-1.03z">
-                </path>
-            </svg>장바구니</button>
+
+                    <button role="link" class="_gnbContent_side_link_ylLn9 N=a:SNB.m.shoppingmy _nlog_click"
+                        data-shp-page-key="100380574" data-shp-sti="" data-shp-nsc="shoppingw.market"
+                        data-shp-inventory="GNB" data-shp-area="GNB.shoppingmy" data-shp-area-type="action"
+                        data-shp-area-id="shoppingmy"><svg width="28" height="28" fill="none"
+                            class="_gnbContent_icon_ESr3R person">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.3"
+                                d="M13.915 13.144a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5zm-7.88 9.391a1.379 1.379 0 01-1.379-1.378v0c0-.763.36-1.482.968-1.94a13.354 13.354 0 0116.066 0c.608.459.966 1.176.966 1.938v0a1.38 1.38 0 01-1.38 1.38H6.035z">
+                            </path>
+                        </svg>마이쇼핑</button>
+
+
+
+
+                    <button role="link"
+                        href="https://shopping.naver.com/cart/mart?channelNo=101309003&amp;deliveryAttributeType=TODAY_ARRIVAL"
+                        class="_gnbContent_side_link_ylLn9 N=a:GNB.cart _nlog_click" data-shp-page-key="100380574"
+                        data-shp-sti="" data-shp-nsc="shoppingw.market" data-shp-inventory="GNB"
+                        data-shp-area="GNB.directcart" data-shp-area-type="action" data-shp-area-id="directcart"><svg
+                            width="28" height="28" fill="none" class="_gnbContent_icon_ESr3R _gnbContent_cart_jaybJ">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.3"
+                                d="M17.75 12.75V8A3.75 3.75 0 0014 4.25v0A3.75 3.75 0 0010.25 8v4.75"></path>
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.3"
+                                d="M22.442 10.25H5.558a.836.836 0 00-.813 1.03l2.113 8.897a3.346 3.346 0 003.255 2.573h7.774a3.346 3.346 0 003.255-2.573l2.113-8.897a.836.836 0 00-.813-1.03z">
+                            </path>
+                        </svg>장바구니</button>
+
+                </div>
+
+                <div class="col-md-3 text-start text bg-debug-left">2222222</div>
+
+            </div>
+
+            <div class="col-md-3 text-start text bg-debug-left">33333</div>
+
+        </div>
+
+
+
+      <!-- 하단 공사-->  <!-- 하단 공사-->  <!-- 하단 공사-->  <!-- 하단 공사-->  <!-- 하단 공사-->  <!-- 하단 공사-->
+<style>
+  /* 기본 푸터 영역의 폰트 크기를 설정하여 전체적인 크기 조절의 기준을 만듭니다. */
+  ._footer_footer_area_sGI8C {
+    font-size: 20px; /* 기준 폰트 크기 (예: 10px) */
+    line-height: 1.4; /* 줄 간격 조정 */
+    color: #666; /* 약간 연한 회색 톤으로 변경하여 가독성을 높입니다. */
+  }
+
+  /* 제목 숨김 처리 */
+  .blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  /* 사이트 정보 링크 영역 */
+  ._footer_info_site_dzggG {
+    margin-bottom: 15px; /* 각 섹션 간 간격 */
+    text-align: center; /* 링크들을 중앙 정렬 */
+  }
+  ._footer_info_site_dzggG a {
+    font-size: 0.7em; /* 부모(10px)의 70% 크기 */
+    margin: 0 8px; /* 링크 간 간격 */
+    text-decoration: none; /* 밑줄 제거 */
+    color: #666; /* 링크 색상 */
+    display: inline-block; /* 가로 정렬 및 간격 적용 */
+    vertical-align: middle; /* 수직 중앙 정렬 */
+  }
+  ._footer_info_site_dzggG a:hover {
+    text-decoration: underline; /* 호버 시 밑줄 */
+  }
+  ._footer_info_site_dzggG a strong { /* 굵은 글씨 (개인정보처리방침 등) */
+    font-size: 1em; /* 링크 크기에 영향받지 않도록 1em 유지 */
+    font-weight: bold;
+  }
+
+  /* 마케팅 문구 */
+  ._footer_marketing_uAMvj {
+    font-size: 0.6em; /* 부모(10px)의 60% 크기 */
+    margin: 10px 0; /* 위아래 간격 */
+    text-align: center; /* 중앙 정렬 */
+    color: #888; /* 약간 더 연한 색상 */
+  }
+
+  /* 주소 및 연락처 정보 */
+  ._footer_address_eNy1h {
+    text-align: center; /* 주소 정보 중앙 정렬 */
+    margin-top: 15px;
+    border-top: 1px solid #eee; /* 구분선 */
+    padding-top: 15px;
+  }
+  ._footer_address_eNy1h div {
+    margin-bottom: 8px; /* 주소 줄 간 간격 */
+  }
+  ._footer_address_eNy1h span._footer_item_NIRb3 {
+    font-size: 0.5em; /* 부모(10px)의 50% 크기 */
+    margin-right: 15px; /* 항목 간 간격 */
+    display: inline-block; /* 가로 정렬 */
+    vertical-align: middle;
+  }
+  ._footer_address_eNy1h a { /* 주소 내 링크 (사업자정보확인, 1:1 문의 등) */
+    font-size: 0.5em;
+    text-decoration: none;
+    color: #666;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  ._footer_address_eNy1h a:hover {
+    text-decoration: underline;
+  }
+  ._footer_address_eNy1h a strong { /* 굵은 글씨 (1:1 문의 바로가기 등) */
+    font-size: 1em; /* 링크 크기에 영향받지 않도록 1em 유지 */
+    font-weight: bold;
+  }
+  ._footer_address_eNy1h span[lang="en"] { /* 영문 텍스트 */
+    font-size: 0.5em;
+  }
+
+  /* 저작권 정보 */
+  ._footer_copyright_hW4Rx {
+    font-size: 0.5em; /* 부모(10px)의 50% 크기 */
+    text-align: center; /* 중앙 정렬 */
+    margin-top: 20px;
+    color: #999; /* 저작권은 더 연한 회색 */
+  }
+  ._footer_copyright_hW4Rx a { /* 저작권 내 링크 */
+    color: #999;
+    text-decoration: none;
+  }
+  ._footer_copyright_hW4Rx a:hover {
+    text-decoration: underline;
+  }
+  ._footer_logo_1FSdH { /* 네이버 로고 링크 (이미지 대체 텍스트) */
+    display: inline-block;
+    width: 50px; /* 로고 크기 조정 */
+    height: 20px;
+    background:
+      url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAxMzAgMzAiPgogIDxwYXRoIGQ9Ik0zMC40IDYuMUM2LjEgNi4xIDAgMTUuNiAwIDI0LjljMCA5LjMgNi4xIDE1LjYgMTYuNSA1LjljMy44LTEuNiA2LjUtNC4xIDYuNS03LjggMC01LjEtNC4xLTguNS04LjUtOC41LTEuNiAwLTIuMSAwLjgtMy41LjItMS42LTEuNi0yLjYtNC42LTIuNi03LjggMC04LjIgNi41LTE1LjYgMTQuNi0xNS42IDcuNSA5LjMgNy41IDE3LjcgMC44IDcuNS01LjMgMTQuNi0xNS42IDE0LjYtMTYuNSAwLTcuNS02LjEtMTQuNi0xNC42LTE0LjZ6IiBmaWxsPSIjMDAwMDAwIi8+CiAgPHBhdGggZD0iTTUxLjUgMjcuNmMwIDYuNS01LjEgMTMuMS0xMy41IDEzLjUtNy42IDAtMTMuNS01LjYtMTMuNS0xMy41IDAtNy42IDUuOS0xMy41IDEzLjUtMTMuNSA3LjcgMCAxMy41IDUuOSA3LjUgMTMuNXoiIGZpbGw9IiMwMDAwMDAiLz4KICA8cGF0aCBkPSJNNjMuNSA2LjFDNjMuNSAyLjYgNjAuNiAwIDU3LjUgMC41IDU0LjMgMCA1MS41IDMuNSA1MS41IDcuNmMwIDMuOCAwLjggNi42IDEuNiA3LjggMC44IDEuMiAxLjYgMi42IDMuNSAyLjYgNC4xIDAgOC41LTEuNiA4LjUtNi41IDAtNS4xLTQuMS04LjUtOC41LTguNXoiIGZpbGw9IiMwMDAwMDAiLz4KICA8cGF0aCBkPSJNODQuOCA2LjFDODQuOCA0LjEgODMuNSAyLjYgODEuMiAyLjZjLTEuNiAwLTIuMSAwLjgtMy41LjItMS42LTEuNi0yLjYtNC42LTIuNi03LjggMC04LjIgNi41LTE1LjYgMTQuNi0xNS42IDcuNSAwIDE0LjYgNi42IDE0LjYgMTUuNiAwIDcuNS02LjcgMTQuMi0xNC42IDE0LjJ6IiBmaWxsPSIjMDAwMDAwIi8+CiAgPHBhdGggZD0iTTExNi42IDYuMUMxMTYuNiAyLjYgMTEzLjcgMC41IDExMC41IDAuNWMtMy4yIDAtNi4xIDIuMS02LjEgNi41IDAgMy44IDEuNiA2LjYgMy41IDcuOCA4LjUgMCAxNC42LTUuNiAxNC42LTE0LjZ6IiBmaWxsPSIjMDAwMDAwIi8+CiAgPHBhdGggZD0iTTEyNy41IDEyLjZjMCA2LjUtNS4xIDEzLjUtMTMuNSAxMy41LTcuNiAwLTEzLjUtNS42LTEzLjUtMTMuNSAwLTcuNiA1LjktMTMuNSAxMy41LTEzLjUgNy42IDAgMTMuNSA1LjYgMTMuNSAxMy41IiBmaWxsPSIjMDAwMDAwIi8+Cjwvc3ZnPg==');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px; /* Hide text content visually */
+  }
+</style>
+
+<div class="_footer_footer_area_sGI8C">
+  <h2 class="blind ">하위영역</h2>
+  <div class="_footer_info_site_dzggG">
+    <a href="http://www.naver.com/rules/service.html" target="_blank" class="N=a:fot.agreement _footer_link_CU-2O">네이버 이용약관</a>
+    <a href="https://new-m.pay.naver.com/member/terms-policy/npay-usage" target="_blank" class="N=a:fot.payagreement _footer_link_CU-2O">네이버페이 이용약관</a>
+    <a href="http://www.naver.com/rules/privacy.html" target="_blank" class="N=a:fot.privacy _footer_link_CU-2O"><strong>개인정보처리방침</strong></a>
+    <a href="https://shopping.naver.com/help/legal-basis" target="_blank" class="N=a:fot.disclaimer _footer_link_CU-2O">법적고지 및 주의사항</a>
+    <a href="http://join.shopping.naver.com/index.nhn" target="_blank" class="N=a:fot.join _footer_link_CU-2O">입점안내</a>
+    <a href="https://sell.smartstore.naver.com/#/home/about?tipModal=WINDOW_EXPOSURE&amp;tap=market" target="_blank" class="N=a:fot.shoppingw _footer_link_CU-2O">쇼핑윈도 노출안내</a>
+    <a href="https://center.shopping.naver.com/" target="_blank" class="N=a:fot.ad _footer_link_CU-2O">쇼핑파트너센터</a>
+    <a href="http://localhost:8088/emartUser/smartstore_seller" target="_blank" class="N=a:fot.sfsell _footer_link_CU-2O">스마트스토어센터</a>
+    <a href="https://safety.shopping.naver.com" target="_blank" class="N=a:fot.safety _footer_link_CU-2O">안전거래센터</a>
+    <a href="https://new-m.pay.naver.com/member/terms-policy/finance" target="_blank" class="N=a:fot.terms _footer_link_CU-2O">전자금융거래약관</a>
+    <a href="https://help.pay.naver.com/index.nhn" target="_blank" class="N=a:fot.help _footer_link_CU-2O">쇼핑&amp;페이 고객센터</a>
+  </div>
+  <p class="_footer_marketing_uAMvj">네이버㈜는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</p>
+  <address class="_footer_address_eNy1h">
+    <div>
+      <span class="_footer_item_NIRb3">사업자등록번호 : 220-81-62517</span>
+      <span class="_footer_item_NIRb3">통신판매업신고번호 : 제2006-경기성남-0692호</span>
+      <span class="_footer_item_NIRb3">대표이사 : 최수연</span>
+      <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208162517" target="_blank" class="N=a:fot.rbinformation _footer_item_NIRb3 _footer_link_CU-2O">사업자등록정보확인</a>
+      <span class="_footer_item_NIRb3">이메일 : <a href="mailto:helpcustomer@naver.com" target="_blank" class="_footer_link_CU-2O" lang="en">helpcustomer@naver.com</a></span>
+    </div>
+    <div>
+      <span class="_footer_item_NIRb3">주소 : 경기도 성남시 분당구 정자일로 95, <span lang="en">NAVER</span> 1784, 13561</span>
+      <span class="_footer_item_NIRb3"><a href="https://help.pay.naver.com/mail/form.help" target="_blank" class="_footer_link_CU-2O"><strong>1:1 문의 바로가기</strong></a></span>
+      <span class="_footer_item_NIRb3">호스팅 서비스 제공 : <span lang="en">NAVER Cloud</span></span>
+    </div>
+    <div>
+      <span class="_footer_item_NIRb3">쇼핑&amp;페이 구매자 고객센터 1588-3819</span>
+      <span class="_footer_item_NIRb3">쇼핑 판매자 고객센터 1599-1598</span>
+      <span class="_footer_item_NIRb3">네이버 대표전화 1588-3820</span>
+      <span class="_footer_item_NIRb3">네이버플러스 멤버십 전용 고객센터 1599-1399</span>
+    </div>
+  </address>
+  <p class="_footer_copyright_hW4Rx" lang="en">
+    <a href="http://www.naver.com" class="_footer_logo_1FSdH" target="_blank">
+      <span class="blind ">NAVER</span>
+    </a>Copyright © 
+    <strong>
+      <a href="http://www.navercorp.com/ko/index.nhn" target="_blank" class="_footer_link_CU-2O">NAVER Corp.</a>
+    </strong>  All Rights Reserved.
+  </p>
+</div>
+
+
+
+<!-- 하단공사-->
+
     </div>
 
 
 
-    <!-- ✅ g-0 으로 간격 제거 -->
-    <div class="row g-0">
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-    </div>
 
 
 
 
-    <!-- ✅ g-0 으로 간격 제거 -->
-    <div class="row g-0">
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-    </div>
-
-    <!-- ✅ g-0 으로 간격 제거 -->
-    <div class="row g-0">
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-    </div>
-    <!-- ✅ g-0 으로 간격 제거 -->
-    <div class="row g-0">
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-    </div>
-    <!-- ✅ g-0 으로 간격 제거 -->
-    <div class="row g-0">
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-    </div>
-    <!-- ✅ g-0 으로 간격 제거 -->
-    <div class="row g-0">
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-    </div>
-    <!-- ✅ g-0 으로 간격 제거 -->
-    <div class="row g-0">
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-    </div>
-
-    <!-- ✅ g-0 으로 간격 제거 -->
-
-    <div class="row g-0">
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-        <div class="col-md-3 text-start text bg-debug-left">입점안내</div>
-
-        <div class="col-md-3 text-start text bg-debug-left">1</div>
-    </div>
-    </div>
 </body>
 
 </html>
