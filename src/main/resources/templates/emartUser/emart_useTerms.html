@@ -6,11 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+     <style>
+        /* 초기화 */
+        article, aside, audio, blockquote, body, button, canvas, dd, details, dl, dt, fieldset,
+        figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, input, legend, li, menu, nav,
+        ol, p, section, table, td, textarea, th, ul, video {
+            margin: 0;
+            padding: 0;
+        }
+        /* 기본 스타일 */
         body {
-            font-family: Arial, sans-serif;
+            color: #303236;
+            font-size: 12px;
+            font-family: -apple-system, "system-ui", "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+            word-wrap: break-word;
+            -webkit-text-size-adjust: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #fff;
+        }
+        body, button, code, input, select, table, textarea {
+            font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", Meiryo, sans-serif;
+            font-size: 16px;
+            line-height: 1.25;
+            outline: none;
+        }
+        /* 메인 컨테이너 */
+        .SignUp_content__ui6Rj {
+            color: #000000ed;
+            padding: 50px 550px 200px;
+        }
+        /* 사용자 정보 리스트 */
+        .SignUp_info_list__l-6nA {
+            border: 1px solid #000000ed;
+            border-radius: 10px;
+            margin-top: px;
+            margin-bottom: 30px;
+            padding: 10px;
         }
 
+        @media (min-width: 550px) {
+            .SignUp_info_list__l-6nA {
+                padding: 23px 31px;
+            }
+        }
+        .SignUp_info_list__l-6nA ul {
+            list-style: none;
+        }
+        /* 리스트 아이템 */
+/* 둥근 박스 핵심 스타일 */
+.SignUp_info_item__3HQiN {
+    display: flex;
+
+    height: 56px;              /* 요소 높이 */
+    padding: 20px 31px;        /* 위/아래 20px, 좌/우 31px 패딩 */
+
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+
+    border-radius: 40px;       /* 둥글게 */
+    margin-inline-start: 109px;
+    margin-inline-end: 50px;
+}
+/* 첫 번째: 위쪽 둥글게 */
+.SignUp_info_item__3HQiN:first-child {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+/* 마지막: 아래쪽 둥글게 + border 제거 */
+.SignUp_info_item__3HQiN:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+
+
+        .SignUp_title__BeTOr {
+            font-weight: 500;
+            color: #111;
+        }
+        .SignUp_txt__q8EZi {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .SignUp_desc__RtWXN {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+            font-size: 14px;
+            margin-inline-start: 15px;
+        }
+        .SignUp_ico__+AeWx {
+            width: 63px;
+            height: 15px;
+            vertical-align: middle;
+        }
+        /* 도움말 버튼 */
+        .SignUp_btn_help__prqXH {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 4px;
+            vertical-align: middle;
+        }
+        /* 약관 제목 */
+        .terms-title {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin: 40px 0 24px;
+            color: #111;
+        }
+        /* 약관 내용 */
+        .terms-content {
+            border: 1px solid #000000ed;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        .terms-content p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .terms-content p b {
+            color: #111;
+        }
+        .terms-content ol {
+            padding-left: 20px;
+            margin: 12px 0;
+        }
+        .terms-content li {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .terms-content li b {
+            color: #333;
+        }
+        /* 버튼 영역 */
+        .button-area {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+        /* btn 버튼부분  */
+        .emart-btn {
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+              background-color: #58e716;
+        }
+        .emart-btn-primary {
+            background-color: #03c75a;
+            color: #ffffff;
+        }
+        .emart-btn-primary:hover {
+            background-color: #02b552;
+        }
+        .emart-btn-secondary {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .emart-btn-secondary:hover {
+            background-color: #e0e0e0;
+        }
+        /* 모달 */
         .modal-backdrop {
             position: fixed;
             top: 0;
@@ -21,72 +193,147 @@
             z-index: 1040;
             display: none;
         }
-
         .modal-content-wrapper {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
             z-index: 1050;
-            max-width: 400px;
-            width: 100%;
+            max-width: 450px;
+            width: 90%;
             font-size: 14px;
             display: none;
         }
-
         .modal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #dee2e6;
-            padding-bottom: 10px;
+            border-bottom: 1px solid #e4e8eb;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
         }
-
+        .modal-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111;
+        }
         .modal-body {
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding: 16px 0;
         }
-
         .modal-footer {
             display: flex;
             justify-content: flex-end;
-            border-top: 1px solid #dee2e6;
-            padding-top: 10px;
+            gap: 12px;
+            border-top: 1px solid #e4e8eb;
+            padding-top: 16px;
+            margin-top: 16px;
         }
-
-        .emart-login-title {
-            color: #0046ab;
-            font-weight: bold;
+        .consent-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
         }
-
-        .emart-btn {
-            background-color: #0046ab;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
+        .consent-item:last-child {
+            border-bottom: none;
+        }
+        .consent-item label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+        .consent-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #03c75a;
+        }
+        .modal-notice {
+            font-size: 12px;
+            color: #888;
+            background-color: #f8f8f8;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 16px;
+            line-height: 1.5;
         }
 
-        .emart-btn:hover {
-            background-color: #003380;
-        }
+        .underbarline{
+    border-top: 1px solid #000000ed;
+    margin-top: 8px;
+    padding-top: 40px;
+}
     </style>
-    
+
 </head>
-
 <body>
-    <div class="container py-5 text-center">
+    <!-- 네모 부분 -->
+    <div class="SignUp_content__ui6Rj">
+        <!-- 상단맨위상단맨위상단맨위상단맨위상단맨위상단맨위상단맨위상단맨위 -->
 
-        <ul class="SignUp_info_list__l-6nA"><li class="SignUp_info_item__3HQiN"><div class="SignUp_title__BeTOr"><strong class="SignUp_txt__q8EZi">로그인 아이디</strong></div><span class="SignUp_desc__RtWXN">tjfd*******<img src="/static/media/icon-naverid-63x15.92a6ae3763235b6af800070d37ece3a6.svg" alt="네이버 아이디" class="SignUp_ico__+AeWx"></span></li><li class="SignUp_info_item__3HQiN"><div class="SignUp_title__BeTOr"><strong class="SignUp_txt__q8EZi">이름</strong></div><span class="SignUp_desc__RtWXN">설*권</span></li><li class="SignUp_info_item__3HQiN"><div class="SignUp_title__BeTOr"><strong class="SignUp_txt__q8EZi">이메일<button type="button" class="SignUp_btn_help__prqXH"><img src="/static/media/icon-help-16.a302f8f8038dd8a2af0ba5f9e070aa16.svg" alt="도움말 열기"></button></strong><div class="SignUp_tooltip_box__j52F6"><div class="TooltipBox_tooltip_box__uSIF4"><ul class="TooltipBox_help_list__T0RG2"><li class="TooltipBox_help_item__AbblT">아이디, 비밀번호 찾기 등 본인확인이 필요한 경우 또는 스마트스토어 주요 안내를 받을 때 사용할 이메일 주소입니다.</li><li class="TooltipBox_help_item__AbblT">가입 후, 로그인하시면 내정보 &gt; 회원 정보에서 변경 가능합니다.</li></ul><button type="button" class="TooltipBox_btn_close__bGZjO"><img src="/static/media/icon-close-24.eae702dc3b4725bef34b50343b7a7e1a.svg" alt="도움말 닫기"></button></div></div></div><span class="SignUp_desc__RtWXN">tj*********@naver.com</span></li></ul>
+ <!-- 제목 (중앙 정렬 + 밑줄) -->
+       <h2 style="text-align:center;">네이버 커머스 ID 회원가입</h2>
+       <br>
+
+       <p class="underbarline"></p> 
 
 
 
+        <!--상단맨위 상단맨위상단맨위상단맨위상단맨위상단맨위상단맨위 -->
+           <!-- 로그인하면 나와야하는부분 -->
+       
+           <!-- 사용자 정보 리스트 -->
+        <div class="SignUp_form_area__7jT1q">
+            <div class="SignUp_info_list__l-6nA">
+                <ul>
+                    <li class="SignUp_info_item__3HQiN">
+                        <div class="SignUp_title__BeTOr">
+                            <strong class="SignUp_txt__q8EZi">로그인 아이디</strong>
+                        </div>
+                          
+                        <span class="SignUp_desc__RtWXN">
+                         
+                          
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='63' height='15' viewBox='0 0 63 15'%3E%3Crect fill='%2303C75A' width='63' height='15' rx='3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-size='9' font-weight='600'%3ENAVER%3C/text%3E%3C/svg%3E" alt="네이버 아이디" class="SignUp_ico__+AeWx">
+                        </span>
+                    </li>
+                    <li class="SignUp_info_item__3HQiN">
+                        <div class="SignUp_title__BeTOr">
+                            <strong class="SignUp_txt__q8EZi">이름</strong>
+                        </div>
+                        <!-- 사용자 실제이름나와야하는부분 -->
+                        <span class="SignUp_desc__RtWXN">설*권</span>
+                        
+                    </li>
+                    <li class="SignUp_info_item__3HQiN">
+                        <div class="SignUp_title__BeTOr">
+                            <strong class="SignUp_txt__q8EZi">
+                                이메일
+                                <button type="button" class="SignUp_btn_help__prqXH">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="#888">
+                                        <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm1 12H7V7h2v5zm0-6H7V4h2v2z"/>
+                                    </svg>
+                                </button>
+                            </strong>
+                        </div>
+                        <!-- 사용자 실제 이메일이 나와야하는부분 -->
+                        <span class="SignUp_desc__RtWXN">tj*********@naver.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+ <!-- 로그인하면 나와야하는부분 -->
 
+<!-- 네모부분 -->
+
+<!-- 상단공사 -->
 
         <h1>제3자에게 개인정보를 제공하는 것에 대한 동의</h1>
 
