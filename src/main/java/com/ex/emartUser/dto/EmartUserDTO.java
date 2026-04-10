@@ -8,8 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 //저장소
 @Data
-@Getter
-@Setter
+
 public class EmartUserDTO {
 
     private String name;

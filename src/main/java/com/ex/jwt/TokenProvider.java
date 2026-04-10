@@ -32,7 +32,7 @@ private long refreshTokenValidity;
         Date Tokenvalidity = new Date(now.getTime() +  ACCESS_TOKEN_VALIDITY * 1000);
       return Jwts.builder()
             .subject(String.valueOf(userId))
-            .claim("type", "refresh")
+             .claim("roleId", roleId)  // int 타입으로 저장
             .issuedAt(now)
             .expiration(Tokenvalidity)
             .signWith(getSigningKey())
@@ -86,4 +86,16 @@ public String createRefreshToken(String userId) {
                 .getPayload()
                 .get("roleId", Integer.class);
     }
+
+     // -----------------------------------------------------------------
+    // 2️⃣ Parsing – returns the Claims object
+    // -----------------------------------------------------------------
+    public Claims getClaimsFromRefreshToken(String token) {
+        return Jwts.parser()
+               .verifyWith(getSigningKey())
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
+    }
+
 }
